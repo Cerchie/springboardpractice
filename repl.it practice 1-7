@@ -1,0 +1,57 @@
+function appendToString(firstStr, secondStr) {
+    let newStr = (firstStr + secondStr);
+    console.log(newStr);
+}
+
+function prependToString(strOne, strTwo) { //define function
+    let newStr = strTwo + strOne;
+    console.log(newStr);
+}
+
+
+function prependToString(strOne, strTwo) {
+    let newStr = strOne.unshift(strTwo);
+    return newStr;
+}
+
+function charAt(str, index) {
+    if (index > str.length) {
+        return '';
+    } else {
+        return str[index];
+    }
+}
+
+function stringIndexOf(word, char) {
+    let place = 0;
+    for (let i = 0; i < word.length; i++) {
+        place += [i];
+    }
+}
+
+function stringIndexOf(word, char) {
+    for (var i = 0; i < word.length; i++) {
+        if (word[i] === char) {
+            return i;
+        }
+    }
+    return -1;
+}
+
+function stringLastIndexOf(word, char) { //define function
+    for (var i = word.length; i > 0; i--) { //iterating through string backwards
+        if (word[i] === char) { //finding last char
+            return i;
+        }
+    }
+    return -1;
+}
+
+function repeat(str, num) {
+    let newStr = '';
+    while (num > 0) {
+        newStr += str;
+        num--;
+    }
+    return newStr;
+}
