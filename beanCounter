@@ -1,0 +1,42 @@
+function countBs(str) {
+    let counter = 0;
+    for (i = 0; i < str.length; i++) {
+
+        if (str[i] === 'B') {
+            counter += 1;
+        }
+
+    }
+    return counter;
+
+}
+
+function countChar(str, char) { //making case universal
+    let counter = 0;
+    for (i = 0; i < str.length; i++) {
+
+        if (str[i] === char) {
+            counter += 1;
+        }
+
+    }
+    return counter;
+
+}
+
+//Can we make it case-agnostic? Let's see...
+
+function countChar(str, char) {
+    let counter = 0;
+    let newStr = str.toUpperCase();
+    for (i = 0; i < newStr.length; i++) {
+
+        if (newStr[i] === char) {
+            counter += 1;
+        }
+
+    }
+    return counter;
+
+}
+//only works if char is uppercase. Hm...
