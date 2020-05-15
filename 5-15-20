@@ -1,0 +1,169 @@
+function includes(arr, num) {
+    let count = arr.length;
+    for (i = 0; i < count; i++) {
+        if (arr[i] === num) {
+            return true;
+        }
+
+    }
+    return false;
+}
+
+function indexOf(arr, num) {
+    let count = arr.length;
+    for (let i = 0; i < count; i++) {
+        if (arr[i] === num) {
+            return i;
+        }
+
+    }
+    return -1
+}
+function push(arr, val) {
+    newArr = arr.concat(val);
+    console.log(newArr);
+    return newArr.length;
+}
+
+function pop(arr) {
+    let count = arr.length;
+    for (let i = 0; i < count; i++) {
+        if (arr[i] === arr.length -1) {
+            return (arr.splice(arr.indexOf(arr.length), 1));
+
+        }
+
+    }
+    return undefined;
+}
+
+function push(arr, val) {
+    arr[arr.length] = val;
+    console.log(arr);
+    return arr.length;
+}
+
+function unshift(arr, val) {
+    let count = arr.length;
+    for (let i = count - 1; i > 0; i--) {
+        if (arr[i] === arr.length - arr.length) {
+            arr[i] = val;
+
+        }
+    }
+    return arr.length;
+}
+
+function shift(arr) {
+
+    if (arr.length === 0) {
+        return undefined;
+    }
+    let removed = arr.splice(0, 1);
+    return removed;
+
+}
+
+function pop(arr) {
+	let count = arr.length;
+	for (let i = 0; i < count; i++) {
+		if (arr[i] === arr.length) {
+		  let lastVal = arr[arr.length - 1];
+
+		  arr.splice(arr.indexOf(arr.length), 1);
+					return lastVal;
+		}
+
+	}
+	return undefined;}
+
+function reverse(arr) {
+	let count = arr.length;
+	for (let i = 0; i < count; i++) {
+		arr.pop(i - 1);
+		arr.unshift(i + 1);
+	}
+	return arr;
+}
+function max(arr) {
+	let count = arr.length;
+	let largestNum = 0;
+	for (i = 0; i < arr.length; i++) {
+		if (arr[i] > largestNum) {
+			largestNum = arr[i];
+		}
+	}
+	return largestNum;
+}
+
+function min(arr) {
+	let count = arr.length;
+	let smallestNum = Math.max(...arr);
+	for (i = 0; i < count; i++) {
+		if (arr[i] < smallestNum) {
+			smallestNum = arr[i];
+		}
+	}
+	return smallestNum;
+}
+
+const reverse = (arr) => {
+	let count = arr.length;
+	for (let i = 0; i < count; i++) {
+		popped = arr.pop(i);
+		arr.unshift(popped);
+	}
+	return arr;
+};
+
+function slice(arr, numOne, numTwo) {
+	let count = arr.length;
+	for (i = 0; i < count; i++) {
+		if (i === numOne) {
+			return arr[i]
+		}
+	}
+}
+function squareEvenNumbers(arr) {
+	let count = arr.length;
+	for (i = 0; i < count; i++) {
+		if (arr[i] % 2 === 0) {
+			let squaredNum = arr[i] * arr[i];
+			let sum = 0;
+			sum += squaredNum;
+		}
+	}
+	return sum;
+}
+
+function reverse(arr) {
+	//Use a two pointer solution: have an index number at each end of the array moving towards the center so something like
+	let i = 0;
+	let j = arr.length - 1;
+
+	while (i < j) {
+		let temp = arr[i];
+		arr[i] = arr[j];
+		arr[i] = temp;
+		i++;
+		j--;
+		//Insert your code for swapping values at those indexes here
+		//Don't forget to increment and decrement your indexes!
+	}
+}
+function values(obj){
+    let arr = [];
+  for (let val in obj) {
+         arr.push(val);
+    }
+    return arr;
+  }
+
+function countValues(arr, num) {
+	for (let val in arr) {
+		if (val === num) {
+			let counter = 0;
+			return counter++;
+		}
+	}
+}
